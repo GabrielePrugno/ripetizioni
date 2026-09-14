@@ -1,0 +1,40 @@
+<!-- Copyright (c) 2026 Gabriele Prugno. All rights reserved. -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriele Prugno</title>
+    <link rel="stylesheet" href="style/style.css">
+    
+    <!-- Controllo dello stato di manutenzione -->
+    <script>
+        if (localStorage.getItem('site_maintenance') === 'true') {
+            window.location.href = 'maintenance.html';
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Gabriele Prugno</h1>
+        <p>Coming soon...</p>
+    </header>
+
+    <main>
+        <h2>Questo è l'inizio di qualcosa di grande</h2>
+        <p>Ho appena configurato la mia pagina home. Presto aggiungerò nuovi contenuti, progetti e idee.</p>
+        
+        <div class="calendar-wrapper">
+            <a href="booking.html" class="custom-btn">
+               Fissa un appuntamento
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Tutti i diritti riservati a Gabriele Prugno | <a href="dashboard.html" style="color: #666; text-decoration: none;">Admin</a></p>
+    </footer>
+
+</body>
+</html>
