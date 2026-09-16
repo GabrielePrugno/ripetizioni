@@ -1,0 +1,62 @@
+<!-- Copyright (c) 2026 Gabriele Prugno. All rights reserved. -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenota un Appuntamento</title>
+    <link rel="stylesheet" href="style/style.css">
+    
+    <!-- Controllo dello stato di manutenzione -->
+    <script>
+        if (localStorage.getItem('site_maintenance') === 'true') {
+            window.location.href = 'maintenance.html';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">GABRIELE PRUGNO</a></div>
+        <nav class="nav-links">
+            <a href="me.html">CHI SONO IO?</a>
+        </nav>
+        <a href="index.html" class="btn-outline-sm">🏠</a>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        
+        <!-- Booking Header Section -->
+        <section class="hero-section" style="padding-bottom: 2rem; grid-template-columns: 1fr;">
+            <div class="hero-content">
+                <span class="section-tag">&mdash; PRENOTAZIONE ONLINE</span>
+                <h1 class="hero-title">Fissa un appuntamento.</h1>
+                <p class="hero-subtitle">
+                    Seleziona la data e l'orario più comodi per te direttamente dal calendario sottostante. Riceverai una conferma immediata via email.
+                </p>
+            </div>
+        </section>
+
+        <!-- Google Calendar Embed Container -->
+        <section class="booking-calendar-section">
+            <div class="calendar-embed-frame">
+                <!-- Google Calendar Appointment Scheduling begin -->
+                <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2pSFNQS7HlMXKCCh6ACoEn0Q-ZIsM1eIbjxJtRkHIQAtX1nQZTLDccXStNKVUGUmn6h_0moEcF?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+                <!-- end Google Calendar Appointment Scheduling -->
+            </div>
+        </section>
+
+        <hr class="divider">
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bar">
+        <span>&copy; 2026 GABRIELE PRUGNO &mdash; TUTTI I DIRITTI RISERVATI</span>
+        <span><a href="dashboard.html" class="admin-link"></a>ITALIA</span>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+/* Reset base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 1. Definizione delle Variabili per i Temi */
+:root {
+    --bg-color: #ffffff;
+    --text-main: #111111;
+    --text-subtitle: #444444;
+    --text-muted: #666666;
+    --text-service: #555555;
+    --border-color: #111111;
+    
+    --btn-solid-bg: #111111;
+    --btn-solid-text: #ffffff;
+    --btn-solid-hover: #333333;
+    
+    --btn-outline-bg: transparent;
+    --btn-outline-text: #111111;
+    --btn-outline-border: #111111;
+    --btn-outline-hover-bg: #111111;
+    --btn-outline-hover-text: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-main: #ffffff;
+    --text-subtitle: #cccccc;
+    --text-muted: #aaaaaa;
+    --text-service: #cccccc;
+    --border-color: #ffffff;
+    
+    --btn-solid-bg: #ffffff;
+    --btn-solid-text: #121212;
+    --btn-solid-hover: #e0e0e0;
+    
+    --btn-outline-bg: transparent;
+    --btn-outline-text: #ffffff;
+    --btn-outline-border: #ffffff;
+    --btn-outline-hover-bg: #ffffff;
+    --btn-outline-hover-text: #121212;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container principale */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    flex: 1;
+    width: 100%;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+/* Buttons */
+.btn-outline-sm {
+    text-decoration: none;
+    color: var(--btn-outline-text);
+    border: none;
+    background-color: transparent;
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-sm:hover {
+    border: none;
+    background-color: transparent;
+    color: var(--btn-outline-hover-text);
+}
+.btn-outline-torna {
+    text-decoration: none;
+    color: var(--btn-outline-text);
+    border: 1px solid var(--btn-outline-border);
+    background-color: var(--btn-outline-bg);
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+.btn-outline-torna:hover {
+    background-color: var(--btn-outline-hover-bg);
+    color: var(--btn-outline-hover-text);
+}
+
+.btn-solid {
+    display: inline-block;
+    background-color: var(--btn-solid-bg);
+    color: var(--btn-solid-text);
+    text-decoration: none;
+    padding: 14px 24px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-solid:hover {
+    background-color: var(--btn-solid-hover);
+}
+
+.btn-outline {
+    display: inline-block;
+    background-color: var(--btn-outline-bg);
+    color: var(--btn-outline-text);
+    border: 1px solid var(--btn-outline-border);
+    text-decoration: none;
+    padding: 14px 24px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+    background-color: var(--btn-outline-hover-bg);
+    color: var(--btn-outline-hover-text);
+}
+
+.link-underline {
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    align-self: center;
+}
+
+/* Hero Section */
+.hero-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    padding: 4rem 0 3rem 0;
+    align-items: start;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-subtitle);
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+/* Stats Block */
+.hero-stats {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-item {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-top: 0.3rem;
+}
+
+/* Divider Line */
+.divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 2rem 0 4rem 0;
+}
+
+/* Services Section */
+.services-section {
+    padding-bottom: 3rem;
+}
+
+.section-tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 2.5rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    border-left: 1px solid var(--border-color);
+    padding-left: 1.2rem;
+}
+
+.service-num {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #e53935; /* accento di colore rosso come nell'immagine */
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.service-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+}
+
+.service-text {
+    font-size: 0.9rem;
+    color: var(--text-service);
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.admin-link {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.admin-link:hover {
+    color: var(--text-main);
+}
+
+/* Responsive per Schermi Piccoli */
+@media (max-width: 900px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .nav-links {
+        display: none;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

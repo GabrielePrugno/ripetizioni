@@ -4,22 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sito in Manutenzione</title>
+    <title>Home</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
-    <header>
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo">GABRIELE PRUGNO</div>
+        <nav class="nav-links">
+            <a href="me.html">CHI SONO IO?</a>
+        </nav>
+        <!-- Modificato: aggiunto id="theme-toggle" e rimosso l'href per farlo funzionare come interruttore -->
+        <button id="theme-toggle" class="btn-outline-sm" style="cursor: pointer; background: transparent;">🌙</button>
     </header>
 
-    <main>
-        <h2>Sito in Manutenzione</h2>
-        <p>Coming soon...</p>
+    <!-- Main Content Container -->
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Ripetizioni</h1>
+                <p class="hero-subtitle">
+                    Offro ripetizioni di informatica e programmazione per studenti di scuole superiori.
+                </p>
+                <div class="hero-buttons">
+                    <a href="appuntamento.html" class="btn-solid">FISSA UN APPUNTAMENTO &rarr;</a>
+                    <a href="informazioni.html" class="btn-outline">INFORMAZIONI</a>
+                </div>
+            </div>
+
+            <!-- Stats Block -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">AA</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">AA</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">AA</div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Services Section -->
+        <section id="servizi" class="services-section">
+            <span class="section-tag" style="font-size: large;">&mdash; Argomenti trattati </span>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-num">01</span>
+                    <h3 class="service-title">Informatica</h3>
+                    <p class="service-text">Basi di dati, algoritmi e strutture dati e problem solving</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-num">02</span>
+                    <h3 class="service-title">Aaaa</h3>
+                    <p class="service-text">Preparazione a verifiche, esami o progetti pratici</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-num">03</span>
+                    <h3 class="service-title">Aaaa</h3>
+                    <p class="service-text">Supporto per compiti a casa ed esercitazioni</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-num">04</span>
+                    <h3 class="service-title">Linguaggi di programmazione</h3>
+                    <p class="service-text">C++, C#, MySQL, Python, Kotlin ecc...</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 - Tutti i diritti riservati a Gabriele Prugno</p>
+    <!-- Footer -->
+    <footer class="footer-bar">
+        <span>&copy; 2026 GABRIELE PRUGNO &mdash; TUTTI I DIRITTI RISERVATI</span>
+        <span><a href="dashboard.html" class="admin-link"></a>ITALIA</span>
     </footer>
+
+    <!-- Script per la gestione del Theme Switcher tramite il bottone Booking -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // Controlla se c'è un tema salvato in precedenza
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            htmlElement.setAttribute('data-theme', 'dark');
+            themeToggleBtn.innerHTML = 'Light Mode &rarr;';
+        }
+
+        // Gestione del click sul bottone Booking
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                htmlElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeToggleBtn.innerHTML = '🌙';
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggleBtn.innerHTML = '☀️';
+            }
+        });
+    </script>
 
 </body>
 </html>
