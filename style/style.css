@@ -207,30 +207,35 @@ body {
     flex-wrap: wrap;
 }
 
-/* Stats Block */
-.hero-stats {
+/* Roadmap Block (Sostituisce i vecchi numeri) */
+.hero-roadmap {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem; /* Spazio tra gli step */
 }
 
-.stat-item {
+.roadmap-item {
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1.2rem;
 }
 
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: 900;
-    line-height: 1;
+.roadmap-item:last-child {
+    border-bottom: none; /* Toglie la riga sotto l'ultimo elemento per un look più pulito */
 }
 
-.stat-label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    letter-spacing: 1px;
-    margin-top: 0.3rem;
+.roadmap-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.5px;
+}
+
+.roadmap-desc {
+    font-size: 0.9rem;
+    color: var(--text-subtitle);
+    line-height: 1.5;
 }
 
 /* Divider Line */
