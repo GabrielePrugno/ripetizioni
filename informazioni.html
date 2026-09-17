@@ -21,29 +21,77 @@
     <!-- Header Navigation -->
     <header class="navbar">
         <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">GABRIELE PRUGNO</a></div>
-        <nav class="nav-links">
+        
+        <!-- Menu di navigazione con ID per il mobile -->
+        <nav class="nav-links" id="nav-menu">
             <a href="me.html">CHI SONO IO?</a>
         </nav>
-        <!-- Aggiunto lo stesso stile in linea del bottone della Home per pareggiare le dimensioni -->
-        <a href="index.html" class="btn-outline-sm" style="cursor: pointer; background: transparent; display: flex; align-items: center; justify-content: center;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house">
-                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
-                <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-            </svg>
-        </a>
+        
+        <!-- Gruppo bottoni a destra (Hamburger + Home) -->
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+            
+            <!-- Tasto Hamburger (visibile solo su telefono tramite CSS) -->
+            <button id="hamburger-btn" class="btn-outline-sm hamburger-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+
+            <!-- Tasto Home (Casetta) -->
+            <a href="index.html" class="btn-outline-sm" style="cursor: pointer; background: transparent; display: flex; align-items: center; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house">
+                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                    <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                </svg>
+            </a>
+            
+        </div>
     </header>
 
     <!-- Main Content Container -->
     <main class="container">
         
-        <!-- Information Header Section -->
+        <!-- Information Section -->
         <section class="hero-section" style="padding-bottom: 2rem; grid-template-columns: 1fr;">
             <div class="hero-content">
                 <span class="section-tag">&mdash; INFORMAZIONI</span>
-                <h1 class="hero-title">Coming soon...</h1>
-                <p class="hero-subtitle">
-                    Coming soon...
+                <h1 class="hero-title">Benvenuto/a!</h1>
+                <p class="hero-subtitle" style="margin-bottom: 3rem;">
+                    Prenota qui la tua lezione individuale di Informatica. Le ripetizioni sono rivolte a studenti delle scuole medie e superiori.
                 </p>
+
+                <!-- Blocco Testuale Strutturato -->
+                <div style="text-align: left;">
+                    
+                    <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">Cosa possiamo affrontare insieme:</h3>
+                    <ul style="list-style-type: none; padding-left: 0; margin-bottom: 2.5rem; color: var(--text-subtitle); line-height: 1.8;">
+                        <li style="margin-bottom: 0.5rem;"><strong>&bull;</strong> Linguaggi di programmazione (C/C++, Kotlin, HTML/CSS, JavaScript, SQL, ecc.)</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>&bull;</strong> Basi di dati, algoritmi e strutture dati</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>&bull;</strong> Preparazione a verifiche, esami o progetti pratici</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>&bull;</strong> Supporto per compiti a casa ed esercitazioni</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">Modalità di svolgimento:</h3>
+                    <ul style="list-style-type: none; padding-left: 0; margin-bottom: 2.5rem; color: var(--text-subtitle); line-height: 1.8;">
+                        <li style="margin-bottom: 0.5rem;"><strong>&bull; Online:</strong> lezione a distanza tramite piattaforma (Google Meet, Discord, ecc.).</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>&bull; In presenza (A domicilio):</strong> vengo io da te per svolgere la lezione di persona.</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">Come prepararsi e prenotare:</h3>
+                    <ul style="list-style-type: none; padding-left: 0; margin-bottom: 2.5rem; color: var(--text-subtitle); line-height: 1.8;">
+                        <li style="margin-bottom: 0.5rem;"><strong>&bull; In fase di prenotazione:</strong> specifica sempre nella sezione dedicata se preferisci la lezione Online o In presenza. Se scegli la modalità a domicilio, <u>ricordati di inserire il tuo indirizzo</u>.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>&bull; Materiale didattico:</strong> se hai esercizi specifici, diapositive o tracce d'esame, per favore inviameli o preparali prima dell'inizio dell'incontro per ottimizzare i tempi.</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">Contatti:</h3>
+                    <p style="color: var(--text-subtitle); line-height: 1.6; margin-bottom: 1rem;">
+                        Per qualsiasi dubbio, o se hai una richiesta particolare prima di fissare l'appuntamento, non esitare a contattarmi:
+                    </p>
+                    <p style="color: var(--text-main); font-weight: 600; line-height: 1.6; font-size: 1.1rem;">
+                        <a href="tel:+393890529153" style="color: inherit; text-decoration: underline;">+39 3890529153</a>
+                        <br>
+                        <a href="mailto:gabriele.0hpru@gmail.com" style="color: inherit; text-decoration: underline;">gabriele.0hpru@gmail.com</a>
+                    </p>
+
+                </div>
             </div>
         </section>
 
@@ -54,9 +102,20 @@
     <!-- Footer -->
     <footer class="footer-bar">
         <span>&copy; 2026 GABRIELE PRUGNO</span>
-        <!-- Corretto il tag a -->
         <span><a class="admin-link"></a>ITALIA</span>
     </footer>
+
+    <!-- Script per aprire/chiudere il menu Hamburger su mobile -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (hamburgerBtn && navMenu) {
+            hamburgerBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
 
 </body>
 </html>
