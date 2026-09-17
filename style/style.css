@@ -334,3 +334,39 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* --- Menu Mobile (Hamburger) --- */
+.hamburger-btn {
+    display: none; /* Nascosto su PC */
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    padding: 0.4rem;
+}
+
+@media (max-width: 768px) {
+    .hamburger-btn {
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-links {
+        display: none; /* Nasconde le scritte di default su mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Distanza dall'alto, regolabile */
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-main);
+        border-bottom: 1px solid var(--border-color);
+        padding: 1.5rem 0;
+        text-align: center;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    /* Classe che il Javascript userà per aprire il menu */
+    .nav-links.active {
+        display: flex; 
+    }
+}
