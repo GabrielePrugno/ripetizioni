@@ -28,26 +28,16 @@
     <!-- Header Navigation -->
     <header class="navbar">
         <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">GABRIELE PRUGNO</a></div>
-        
-        <!-- Aggiunto id="nav-menu" -->
-        <nav class="nav-links" id="nav-menu">
+        <nav class="nav-links">
             <a href="me.html">CHI SONO IO?</a>
         </nav>
-        
-        <!-- Contenitore per i due bottoni a destra -->
-        <div style="display: flex; gap: 0.5rem; align-items: center;">
-            
-            <!-- Tasto Hamburger (Nuovo) -->
-            <button id="hamburger-btn" class="btn-outline-sm hamburger-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-            </button>
-
-            <!-- Tasto Luna (o Tasto Casetta nelle altre pagine) -->
-            <button id="theme-toggle" class="btn-outline-sm" style="cursor: pointer; background: transparent; display: flex; align-items: center; justify-content: center;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
-            </button>
-            
-        </div>
+        <!-- Aggiunto lo stesso stile in linea del bottone della Home per pareggiare le dimensioni -->
+        <a href="index.html" class="btn-outline-sm" style="cursor: pointer; background: transparent; display: flex; align-items: center; justify-content: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house">
+                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            </svg>
+        </a>
     </header>
 
     <!-- Main Content Container -->
