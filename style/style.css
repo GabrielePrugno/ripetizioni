@@ -1,4 +1,7 @@
 /* Reset base */
+html {
+    overflow-y: scroll;
+}
 * {
     box-sizing: border-box;
     margin: 0;
